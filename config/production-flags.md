@@ -34,7 +34,10 @@ Verify with `sha256sum` after download — matching size alone does not prove co
   draft head (+10% decode, 81.6% acceptance). n-max 1 is the measured winner; n3 neutral, n6 −26%.
 - `--load-mode mlock` — pins the model in RAM; observed mitigation for Windows working-set
   trimming, which collapsed decode to 4–8 t/s on this rig (no controlled pressure test yet).
-  Costs pinned RAM.
+  Costs pinned RAM: ~19.4 GB (model + draft) stays resident while the server runs — about
+  half of a 32 GB rig, even when idle. If that's unacceptable, run the stack on-demand
+  (enable + start the supervisor task when local is needed, end + disable when not);
+  dropping mlock instead trades stable decode for the 4–8 t/s collapse above.
 - `--fit on` — VRAM fitter; with `--flash-attn on` and 64k f16 KV it fills the card (~5 GB KV;
   check the startup allocation log after any ctx/KV change).
 
