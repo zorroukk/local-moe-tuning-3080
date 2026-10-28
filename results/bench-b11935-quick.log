@@ -1,0 +1,12 @@
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 10239 MiB):
+  Device 0: NVIDIA GeForce RTX 3080, compute capability 8.6, VMM: yes, VRAM: 10239 MiB
+load_backend: loaded CUDA backend from <llama.cpp-build>\ggml-cuda.dll
+load_backend: loaded RPC backend from <llama.cpp-build>\ggml-rpc.dll
+load_backend: loaded CPU backend from <llama.cpp-build>\ggml-cpu-alderlake.dll
+| model                          |       size |     params | backend    | ngl |  n_cpu_moe |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | ---------: | --: | --------------: | -------------------: |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |           pp512 |        72.74 ± 51.81 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |           tg128 |         38.31 ± 0.95 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |      pp256+tg64 |        55.73 ± 12.38 |
+
+build: 7ecb57f7a (11935)

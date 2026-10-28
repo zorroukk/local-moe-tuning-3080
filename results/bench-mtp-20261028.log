@@ -1,0 +1,20 @@
+﻿=== baseline-q4km  03:46:36 ===
+CONFIG baseline-q4km  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=39.1 t/s  tg=41.3 t/s
+  in=611 out=160  pp=54.4 t/s  tg=45.3 t/s
+  in=611 out=160  pp=48.1 t/s  tg=44.8 t/s
+  AVG pp=47.2  tg=43.8
+=== compact-nomtp  03:47:24 ===
+CONFIG compact-nomtp  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=37.3 t/s  tg=49.6 t/s
+  in=611 out=160  pp=50.3 t/s  tg=53.3 t/s
+  in=611 out=160  pp=50.2 t/s  tg=54.5 t/s
+  AVG pp=46.0  tg=52.5
+=== compact-mtp3  03:48:03 ===
+CONFIG compact-mtp3  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=35.3 t/s  tg=33.8 t/s
+  in=611 out=160  pp=45.3 t/s  tg=36.6 t/s
+  in=611 out=160  pp=48.0 t/s  tg=35.7 t/s
+  AVG pp=42.9  tg=35.4
+--- restoring production runtime ---
+=== ALL DONE 03:48:43 ===

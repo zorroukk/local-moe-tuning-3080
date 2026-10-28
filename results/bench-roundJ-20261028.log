@@ -1,0 +1,122 @@
+﻿=== j-mlock  06:07:48  freeRAM_GB=11.1 ===
+CONFIG j-mlock  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=39.5 t/s  tg=49.8 t/s
+  in=611 out=160  pp=46.0 t/s  tg=54.3 t/s
+  in=611 out=160  pp=49.9 t/s  tg=54.4 t/s
+  AVG pp=45.1  tg=52.8
+python : Traceback (most recent call last):
+At <scratch>\roundJ_cycle_bench.ps1:35 char:3
++   python "$scratch\reuse_probe.py" 8092 2>&1 | Out-File $log -Append  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<scratch>\reuse_probe.py", line 3, in <module>
+    PORT = sys.argv[1]; LABEL = sys.argv[2]
+                                ~~~~~~~~^^^
+IndexError: list index out of range
+spec-lines:
+=== j-mtpq8-n1  06:08:33  freeRAM_GB=22.0 ===
+CONFIG j-mtpq8-n1  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=40.8 t/s  tg=56.4 t/s
+  in=611 out=160  pp=49.9 t/s  tg=59.4 t/s
+  in=611 out=160  pp=51.4 t/s  tg=61.0 t/s
+  AVG pp=47.4  tg=58.9
+python : Traceback (most recent call last):
+At <scratch>\roundJ_cycle_bench.ps1:35 char:3
++   python "$scratch\reuse_probe.py" 8092 2>&1 | Out-File $log -Append  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<scratch>\reuse_probe.py", line 3, in <module>
+    PORT = sys.argv[1]; LABEL = sys.argv[2]
+                                ~~~~~~~~^^^
+IndexError: list index out of range
+spec-lines:
+0.28.702.762 I slot print_timing: id  0 | task 0 | draft acceptance = 0.81609 (   71 accepted /    87 generated), mean len =  1.82
+0.33.629.246 I slot print_timing: id  0 | task 92 | draft acceptance = 0.81609 (   71 accepted /    87 generated), mean len =  1.82
+0.36.389.952 I slot print_timing: id  0 | task 182 | draft acceptance = 0.81609 (   71 accepted /    87 generated), mean len =  1.82
+0.39.079.891 I slot print_timing: id  0 | task 272 | draft acceptance = 0.81609 (   71 accepted /    87 generated), mean len =  1.82
+=== j-mtpq8-n3  06:09:18  freeRAM_GB=21.3 ===
+CONFIG j-mtpq8-n3  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=38.4 t/s  tg=51.1 t/s
+  in=611 out=160  pp=47.5 t/s  tg=54.9 t/s
+  in=611 out=160  pp=47.7 t/s  tg=55.2 t/s
+  AVG pp=44.6  tg=53.7
+python : Traceback (most recent call last):
+At <scratch>\roundJ_cycle_bench.ps1:35 char:3
++   python "$scratch\reuse_probe.py" 8092 2>&1 | Out-File $log -Append  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<scratch>\reuse_probe.py", line 3, in <module>
+    PORT = sys.argv[1]; LABEL = sys.argv[2]
+                                ~~~~~~~~^^^
+IndexError: list index out of range
+spec-lines:
+0.28.681.347 I slot print_timing: id  0 | task 0 | draft acceptance = 0.54144 (   98 accepted /   181 generated), mean len =  2.61
+0.33.912.556 I slot print_timing: id  0 | task 65 | draft acceptance = 0.54144 (   98 accepted /   181 generated), mean len =  2.61
+0.36.896.345 I slot print_timing: id  0 | task 128 | draft acceptance = 0.54144 (   98 accepted /   181 generated), mean len =  2.61
+0.39.867.583 I slot print_timing: id  0 | task 191 | draft acceptance = 0.54144 (   98 accepted /   181 generated), mean len =  2.61
+=== j-mtpq8-n6  06:10:05  freeRAM_GB=21.4 ===
+CONFIG j-mtpq8-n6  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=39.7 t/s  tg=39.0 t/s
+  in=611 out=160  pp=46.2 t/s  tg=40.0 t/s
+  in=611 out=160  pp=46.2 t/s  tg=40.6 t/s
+  AVG pp=44.0  tg=39.9
+python : Traceback (most recent call last):
+At <scratch>\roundJ_cycle_bench.ps1:35 char:3
++   python "$scratch\reuse_probe.py" 8092 2>&1 | Out-File $log -Append  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<scratch>\reuse_probe.py", line 3, in <module>
+    PORT = sys.argv[1]; LABEL = sys.argv[2]
+                                ~~~~~~~~^^^
+IndexError: list index out of range
+spec-lines:
+0.29.835.921 I slot print_timing: id  0 | task 0 | draft acceptance = 0.31902 (  104 accepted /   326 generated), mean len =  2.89
+0.36.027.711 I slot print_timing: id  0 | task 59 | draft acceptance = 0.32812 (  105 accepted /   320 generated), mean len =  2.94
+0.40.099.949 I slot print_timing: id  0 | task 115 | draft acceptance = 0.32812 (  105 accepted /   320 generated), mean len =  2.94
+0.44.116.207 I slot print_timing: id  0 | task 171 | draft acceptance = 0.32812 (  105 accepted /   320 generated), mean len =  2.94
+=== j-iq3  06:10:55  freeRAM_GB=21.4 ===
+CONFIG j-iq3  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=33.6 t/s  tg=42.6 t/s
+  in=611 out=160  pp=39.3 t/s  tg=44.6 t/s
+  in=611 out=160  pp=41.5 t/s  tg=44.5 t/s
+  AVG pp=38.2  tg=43.9
+python : Traceback (most recent call last):
+At <scratch>\roundJ_cycle_bench.ps1:35 char:3
++   python "$scratch\reuse_probe.py" 8092 2>&1 | Out-File $log -Append  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<scratch>\reuse_probe.py", line 3, in <module>
+    PORT = sys.argv[1]; LABEL = sys.argv[2]
+                                ~~~~~~~~^^^
+IndexError: list index out of range
+spec-lines:
+=== j-mlock2  06:11:36  freeRAM_GB=21.4 ===
+CONFIG j-mlock2  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=39.9 t/s  tg=51.3 t/s
+  in=611 out=160  pp=48.9 t/s  tg=55.2 t/s
+  in=611 out=160  pp=49.4 t/s  tg=55.2 t/s
+  AVG pp=46.1  tg=53.9
+python : Traceback (most recent call last):
+At <scratch>\roundJ_cycle_bench.ps1:35 char:3
++   python "$scratch\reuse_probe.py" 8092 2>&1 | Out-File $log -Append  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<scratch>\reuse_probe.py", line 3, in <module>
+    PORT = sys.argv[1]; LABEL = sys.argv[2]
+                                ~~~~~~~~^^^
+IndexError: list index out of range
+spec-lines:
+--- restoring production runtime ---
+=== ALL DONE 06:12:18 ===

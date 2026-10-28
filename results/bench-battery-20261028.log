@@ -1,0 +1,29 @@
+﻿=== battery  08:32:32  freeRAM_GB=20.1 ===
+TASK chat_short   in=20    out=36   pp=  27.9 tg=   5.9 wall=   6.7s ttft~0.72s
+TASK code_gen     in=62    out=700  pp=   6.1 tg=  10.0 wall=  80.2s has_def=False
+TASK code_edit    in=332   out=495  pp=   4.2 tg=  12.5 wall= 119.5s fixed=False
+TASK json_tool    in=65    out=55   pp=  15.7 tg=  15.1 wall=   7.8s valid_json=True
+TASK long_gen     in=55    out=1500 pp=   9.3 tg=  24.2 wall=  67.9s 
+TASK rag_8k_cold  in=3858  out=300  pp=  23.3 tg=  22.6 wall= 178.9s 
+TASK rag_8k_warm  in=29    out=200  pp=  45.6 tg=  22.3 wall=   9.6s reuse=True
+TASK translate    in=133   out=646  pp=  31.6 tg=  25.4 wall=  29.8s 
+BATTERY_DONE
+draft-acceptance:
+8.18.033.697 I slot print_timing: id  0 | task 1748 | draft acceptance = 0.85047 (   91 accepted /   107 generated), mean len =  1.85
+8.47.878.763 I slot print_timing: id  0 | task 1860 | draft acceptance = 0.87500 (  301 accepted /   344 generated), mean len =  1.88
+=== ALL DONE 08:41:23 ===
+=== battery  08:42:23  freeRAM_GB=20.2 ===
+WARMUP pp=76.7 tg=57.0
+TASK chat_short   in=20    out=40   pp=  96.1 tg=  52.6 wall=   1.0s ttft~0.21s
+TASK code_gen     in=62    out=700  pp= 146.4 tg=  54.6 wall=  13.3s has_def=True
+TASK code_edit    in=332   out=839  pp= 160.9 tg=  21.9 wall=  40.3s fixed=False
+TASK json_tool    in=65    out=79   pp=  26.1 tg=  21.2 wall=   6.2s valid_json=False
+TASK long_gen     in=55    out=1500 pp=   8.2 tg=  28.1 wall=  60.1s 
+TASK rag_8k_cold  in=3858  out=300  pp=  84.7 tg=  31.4 wall=  55.2s 
+TASK rag_8k_warm  in=29    out=200  pp=  50.1 tg=  32.1 wall=   6.8s reuse=True
+TASK translate    in=133   out=523  pp=  48.6 tg=  33.9 wall=  18.3s 
+BATTERY_DONE
+draft-acceptance:
+3.29.977.637 I slot print_timing: id  0 | task 1978 | draft acceptance = 0.83333 (   90 accepted /   108 generated), mean len =  1.83
+3.48.306.187 I slot print_timing: id  0 | task 2091 | draft acceptance = 0.85765 (  241 accepted /   281 generated), mean len =  1.86
+=== ALL DONE 08:46:15 ===

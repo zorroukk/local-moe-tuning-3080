@@ -1,0 +1,48 @@
+﻿=== tiel-base  04:41:05  freeRAM_GB=11.6 ===
+CONFIG tiel-base  (response timings, 3/3 reps valid)
+  in=790 out=160  pp=31.2 t/s  tg=39.0 t/s
+  in=790 out=160  pp=39.7 t/s  tg=40.8 t/s
+  in=790 out=160  pp=38.3 t/s  tg=40.5 t/s
+  AVG pp=36.4  tg=40.1
+=== reuse-base  04:41:47 ===
+REUSE base T1: in=3152 out=57 wall=7.8s tg=41.4 new_tokens_processed~2774
+REUSE base T2: in=3179 out=60 wall=2.0s tg=39.9 new_tokens_processed~0
+=== reuse-mtp1  04:42:15 ===
+REUSE mtp1 T1: in=3152 out=60 wall=8.4s tg=44.5 new_tokens_processed~2955
+REUSE mtp1 T2: in=3179 out=60 wall=2.0s tg=38.5 new_tokens_processed~0
+=== tiel-mtp1  04:42:44  freeRAM_GB=22.1 ===
+CONFIG tiel-mtp1  (response timings, 3/3 reps valid)
+  in=790 out=160  pp=32.9 t/s  tg=38.0 t/s
+  in=790 out=160  pp=38.6 t/s  tg=38.6 t/s
+  in=790 out=160  pp=37.4 t/s  tg=39.9 t/s
+  AVG pp=36.3  tg=38.8
+=== tiel-mtp1-pmin  04:43:24  freeRAM_GB=22.1 ===
+CONFIG tiel-mtp1-pmin  (response timings, 3/3 reps valid)
+  in=790 out=160  pp=33.2 t/s  tg=35.4 t/s
+  in=790 out=160  pp=37.5 t/s  tg=37.0 t/s
+  in=790 out=160  pp=39.6 t/s  tg=37.2 t/s
+  AVG pp=36.8  tg=36.5
+=== tiel-mtp3  04:44:05  freeRAM_GB=22.1 ===
+CONFIG tiel-mtp3  (response timings, 3/3 reps valid)
+  in=790 out=160  pp=31.8 t/s  tg=31.0 t/s
+  in=790 out=160  pp=36.4 t/s  tg=31.9 t/s
+  in=790 out=160  pp=36.7 t/s  tg=32.7 t/s
+  AVG pp=35.0  tg=31.9
+=== tiel-kv8  04:44:48  freeRAM_GB=22.8 ===
+CONFIG tiel-kv8  (response timings, 3/3 reps valid)
+  in=790 out=160  pp=32.3 t/s  tg=37.6 t/s
+  in=790 out=160  pp=39.2 t/s  tg=40.7 t/s
+  in=790 out=160  pp=40.5 t/s  tg=39.9 t/s
+  AVG pp=37.3  tg=39.4
+=== tiel-nommap  04:45:28  freeRAM_GB=22.9 ===
+NEVER_READY
+=== tiel-kv8-nommap-b2048  04:50:32  freeRAM_GB=22.6 ===
+NEVER_READY
+=== tiel-kv8-b2048  04:55:35  freeRAM_GB=22.4 ===
+CONFIG tiel-kv8-b2048  (response timings, 3/3 reps valid)
+  in=790 out=160  pp=29.7 t/s  tg=38.3 t/s
+  in=790 out=160  pp=36.5 t/s  tg=40.1 t/s
+  in=790 out=160  pp=37.5 t/s  tg=40.7 t/s
+  AVG pp=34.5  tg=39.7
+--- restoring production runtime ---
+=== ALL DONE 04:56:14 ===

@@ -1,0 +1,74 @@
+﻿=== TOOL-compact  05:05:53 ===
+python : Traceback (most recent call last):
+At <scratch>\toolcall_cycle.ps1:25 char:3
++   python "$scratch\native_tool_probe.py" 8092 ornith-35b-a3b 2>&1 | O ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<scratch>\native_tool_probe.py", line 30, in 
+<module>
+    d = json.loads(urllib.request.urlopen(req, timeout=600).read())
+                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 187, 
+in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 493, 
+in open
+    response = meth(req, response)
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 602, 
+in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 531, 
+in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 464, 
+in _call_chain
+    result = func(*args)
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 611, 
+in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+=== TOOL-tiel  05:06:01 ===
+python : Traceback (most recent call last):
+At <scratch>\toolcall_cycle.ps1:25 char:3
++   python "$scratch\native_tool_probe.py" 8092 ornith-35b-a3b 2>&1 | O ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<scratch>\native_tool_probe.py", line 30, in 
+<module>
+    d = json.loads(urllib.request.urlopen(req, timeout=600).read())
+                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 187, 
+in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 493, 
+in open
+    response = meth(req, response)
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 602, 
+in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 531, 
+in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 464, 
+in _call_chain
+    result = func(*args)
+  File "C:\Users\<user>\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\urllib\request.py", line 611, 
+in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+=== TOOL ALL DONE 05:06:07 ===
+=== TOOL-compact  05:06:51 ===
+NATIVE_TOOLCALL ok name=get_weather args={"city":"Oslo"}
+=== TOOL-tiel  05:07:15 ===
+NATIVE_TOOLCALL ok name=get_weather args={"city":"Oslo"}
+=== TOOL ALL DONE 05:07:43 ===

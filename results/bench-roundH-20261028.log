@@ -1,0 +1,26 @@
+﻿=== h-base  05:17:15  freeRAM_GB=13.6 ===
+CONFIG h-base  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=28.4 t/s  tg=45.2 t/s
+  in=611 out=160  pp=43.3 t/s  tg=51.7 t/s
+  in=611 out=160  pp=46.0 t/s  tg=52.4 t/s
+  AVG pp=39.3  tg=49.8
+mlock-lines:
+offload-summary:
+=== h-mlock  05:17:55  freeRAM_GB=21.7 ===
+CONFIG h-mlock  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=39.6 t/s  tg=50.0 t/s
+  in=611 out=160  pp=47.0 t/s  tg=53.7 t/s
+  in=611 out=160  pp=49.9 t/s  tg=53.7 t/s
+  AVG pp=45.5  tg=52.5
+mlock-lines:
+offload-summary:
+=== h-autooff  05:18:38  freeRAM_GB=21.9 ===
+CONFIG h-autooff  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=38.5 t/s  tg=49.7 t/s
+  in=611 out=160  pp=53.8 t/s  tg=52.0 t/s
+  in=611 out=160  pp=53.5 t/s  tg=50.4 t/s
+  AVG pp=48.6  tg=50.7
+mlock-lines:
+offload-summary:
+--- restoring production runtime ---
+=== ALL DONE 05:19:17 ===

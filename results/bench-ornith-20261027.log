@@ -1,0 +1,17 @@
+== b10269
+| model                          |       size |     params | backend    | ngl |  n_cpu_moe |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | ---------: | --: | --------------: | -------------------: |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |           pp512 |        83.02 ± 20.14 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |           tg128 |         42.83 ± 1.17 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |     pp512+tg128 |       128.21 ± 10.69 |
+
+build: 1c3c9674d (10269)
+== b11935
+| model                          |       size |     params | backend    | ngl |  n_cpu_moe |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | ---------: | --: | --------------: | -------------------: |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |           pp512 |       126.12 ± 57.37 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |           tg128 |         41.34 ± 3.04 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.35 GiB |    35.51 B | CUDA       |  99 |         30 |   1 |     pp512+tg128 |        151.48 ± 4.93 |
+
+build: 7ecb57f7a (11935)
+BENCH_DONE

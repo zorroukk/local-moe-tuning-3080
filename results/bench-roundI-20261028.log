@@ -1,0 +1,23 @@
+﻿=== i-mlock  05:22:44  freeRAM_GB=10.0 ===
+CONFIG i-mlock  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=39.3 t/s  tg=50.0 t/s
+  in=611 out=160  pp=49.2 t/s  tg=53.3 t/s
+  in=611 out=160  pp=52.4 t/s  tg=50.5 t/s
+  AVG pp=47.0  tg=51.3
+load-lines:
+=== i-none-kv8  05:23:33  freeRAM_GB=22.1 ===
+CONFIG i-none-kv8  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=40.2 t/s  tg=51.3 t/s
+  in=611 out=160  pp=50.0 t/s  tg=53.4 t/s
+  in=611 out=160  pp=45.4 t/s  tg=52.4 t/s
+  AVG pp=45.2  tg=52.3
+load-lines:
+=== i-none-kv8-b2048  05:24:11  freeRAM_GB=22.1 ===
+CONFIG i-none-kv8-b2048  (response timings, 3/3 reps valid)
+  in=611 out=160  pp=37.6 t/s  tg=44.5 t/s
+  in=611 out=160  pp=45.7 t/s  tg=53.8 t/s
+  in=611 out=160  pp=43.4 t/s  tg=51.0 t/s
+  AVG pp=42.2  tg=49.8
+load-lines:
+--- restoring production runtime ---
+=== ALL DONE 05:24:50 ===
