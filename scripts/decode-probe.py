@@ -29,12 +29,18 @@ PROMPT = ("Explain the tradeoffs of mixture-of-experts routing in transformer "
 
 
 def wait_ready(timeout=300):
+    # /health answers "ok" while weights are still loading (chat then 503s) —
+    # readiness = a tiny chat request actually succeeding.
+    body = json.dumps({"messages": [{"role": "user", "content": "hi"}],
+                       "max_tokens": 1, "temperature": 0.0}).encode()
     t0 = time.time()
     while time.time() - t0 < timeout:
         try:
-            with urllib.request.urlopen(BASE + "/health", timeout=5) as r:
-                if json.loads(r.read()).get("status") == "ok":
-                    return True
+            req = urllib.request.Request(BASE + "/v1/chat/completions", data=body,
+                                         headers={"Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                json.loads(r.read())
+                return True
         except Exception:
             pass
         time.sleep(4)

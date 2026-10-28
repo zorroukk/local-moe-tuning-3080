@@ -1,6 +1,15 @@
 # Cycle bench template (Windows Task Scheduler example)
 # Pattern: disable supervisor -> per-config server cycles with gates -> restore.
 # On Linux/systemd: stop the service, run cycles, restart.
+# CAVEATS (read before running on your box):
+#  - KillServer stops EVERY llama-server process on the host — stop unrelated
+#    inference first; this is not selective.
+#  - Edit the $rt/$model/$draft/$scratch/$log/$task paths below; the shipped
+#    values are placeholders.
+#  - Restoration re-enables $task at the end; if the script is killed mid-run,
+#    re-enable the supervisor manually (schtasks /Change /TN $task /Enable).
+#  - A probe failure does not abort the round — check for NEVER_READY /
+#    NO VALID REPS lines in the log before trusting any cycle's numbers.
 $ErrorActionPreference = "Continue"
 
 $rt      = "C:\path\to\llama.cpp\build\bin"                 # llama-server dir

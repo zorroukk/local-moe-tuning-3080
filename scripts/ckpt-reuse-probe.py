@@ -11,12 +11,13 @@ MODEL = sys.argv[3] if len(sys.argv) > 3 else "ornith-35b-a3b"
 BASE = "http://127.0.0.1:%s" % PORT
 
 def wait_ready(timeout=420):
+    # /health answers "ok" while weights are still loading (chat then 503s) —
+    # readiness = a tiny chat request actually succeeding.
     t0 = time.time()
     while time.time() - t0 < timeout:
         try:
-            with urllib.request.urlopen(BASE + "/health", timeout=5) as r:
-                if json.loads(r.read()).get("status") == "ok":
-                    return True
+            chat([{"role": "user", "content": "hi"}], max_tokens=1)
+            return True
         except Exception:
             pass
         time.sleep(4)
@@ -35,8 +36,9 @@ def chat(messages, max_tokens=60):
     tg = t.get("predicted_per_second") or 0
     out = t.get("predicted_n") or u.get("completion_tokens") or 0
     newtok = max(0, round(wall - out / tg)) * (t.get("prompt_per_second") or 0) if tg else -1
+    content = (d.get("choices") or [{}])[0].get("message", {}).get("content", "")
     return "in=%d out=%d wall=%.1fs tg=%.1f new_tokens_processed~%d" % (
-        u.get("prompt_tokens", 0), out, wall, tg, newtok)
+        u.get("prompt_tokens", 0), out, wall, tg, newtok), content
 
 filler = ("The lighthouse keeper logged every ship that passed the strait: its name, tonnage, "
           "heading and the weather at the time. These entries, written in a careful hand across "
@@ -45,9 +47,12 @@ big = "ARCHIVE-SEED-7734. Summarize the following log excerpt in one short sente
 
 if not wait_ready():
     print("REUSE %s NEVER_READY" % LABEL); sys.exit(1)
-chat([{"role": "user", "content": "warmup"}], max_tokens=8)
+chat([{"role": "user", "content": "warmup"}], max_tokens=8)[0]
 msgs = [{"role": "user", "content": big}]
-print("REUSE %s T1: %s" % (LABEL, chat(msgs)))
-msgs2 = msgs + [{"role": "assistant", "content": "Noted."},
+t1_line, t1_content = chat(msgs)
+print("REUSE %s T1: %s" % (LABEL, t1_line))
+# T2 replays T1's ACTUAL response — the upstream checkpoint bug specifically
+# loses the previous generated answer, so a fake "Noted." would test the wrong thing.
+msgs2 = msgs + [{"role": "assistant", "content": t1_content},
                 {"role": "user", "content": "What tonnage rule is mentioned? Answer briefly."}]
-print("REUSE %s T2: %s" % (LABEL, chat(msgs2)))
+print("REUSE %s T2: %s" % (LABEL, chat(msgs2)[0]))
